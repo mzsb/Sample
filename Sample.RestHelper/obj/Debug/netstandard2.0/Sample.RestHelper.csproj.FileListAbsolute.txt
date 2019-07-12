@@ -1,0 +1,9 @@
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\bin\Debug\netstandard2.0\Sample.RestHelper.deps.json
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\bin\Debug\netstandard2.0\Sample.RestHelper.dll
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\bin\Debug\netstandard2.0\Sample.RestHelper.pdb
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\obj\Debug\netstandard2.0\Sample.RestHelper.csprojAssemblyReference.cache
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\obj\Debug\netstandard2.0\Sample.RestHelper.csproj.CoreCompileInputs.cache
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\obj\Debug\netstandard2.0\Sample.RestHelper.AssemblyInfoInputs.cache
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\obj\Debug\netstandard2.0\Sample.RestHelper.AssemblyInfo.cs
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\obj\Debug\netstandard2.0\Sample.RestHelper.dll
+C:\Users\mozs.barnabas\Sample\Sample.RestHelper\obj\Debug\netstandard2.0\Sample.RestHelper.pdb

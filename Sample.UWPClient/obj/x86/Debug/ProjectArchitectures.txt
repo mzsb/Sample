@@ -1,0 +1,1 @@
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\Sample.UWPClient.csproj;x86

@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="Sample.UWPClient.Views.NewConcertPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Sample.UWPClient.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <NavigationView IsBackEnabled="True"
+                    BackRequested="NavigationView_BackRequested">
+
+        <NavigationView.MenuItems>
+
+            <NavigationViewItemHeader Content="Adminisztráció"/>
+
+            <NavigationViewItem Icon="Add"
+                                Content="Új koncert"/>
+
+        </NavigationView.MenuItems>
+
+        <NavigationView.PaneFooter>
+
+            <NavigationViewItem Icon="MoveToFolder"
+                                Content="Kijelentkezés"
+                                Tapped="SignOut_Click"/>
+
+        </NavigationView.PaneFooter>
+
+        <Grid>
+            <Button Content="Új koncert"
+                    Width="200"
+                    Height="200"
+                    Click="CreateConcert_Click"
+                    HorizontalAlignment="Center"/>
+        </Grid>
+
+    </NavigationView>
+</Page>

@@ -1,0 +1,16 @@
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Sample.DAL.deps.json
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Sample.DAL.dll
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.csproj.CoreCompileInputs.cache
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.AssemblyInfoInputs.cache
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.AssemblyInfo.cs
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.csprojAssemblyReference.cache
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Sample.DAL.pdb
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Core.dll
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Core.xml
+C:\Users\mozs.barnabas\Sample\Sample.DAL\bin\Debug\netcoreapp2.2\Microsoft.Extensions.Identity.Stores.xml
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.csproj.CopyComplete
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.dll
+C:\Users\mozs.barnabas\Sample\Sample.DAL\obj\Debug\netcoreapp2.2\Sample.DAL.pdb

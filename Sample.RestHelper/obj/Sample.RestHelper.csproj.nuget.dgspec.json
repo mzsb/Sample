@@ -1,0 +1,60 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj",
+        "projectName": "Sample.RestHelper",
+        "projectPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj",
+        "packagesPath": "C:\\Users\\mozs.barnabas\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\mozs.barnabas\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.0": {
+          "dependencies": {
+            "NETStandard.Library": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.0.3, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
