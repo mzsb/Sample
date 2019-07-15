@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sample.DTO.Models
 {
-    public class AppUser : RestMetaHolder
+    public class AppUser : RestMethodHolder
     {
         public Guid Id { get; set; }
 

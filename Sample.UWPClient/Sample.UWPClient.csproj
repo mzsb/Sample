@@ -123,6 +123,7 @@
     <Compile Include="Converters\BooleanToVisibilityConverter.cs" />
     <Compile Include="Helper\AppUserHelper.cs" />
     <Compile Include="Helper\LoginHelper.cs" />
+    <Compile Include="Helper\MethodTypeHelper.cs" />
     <Compile Include="Helper\RegistrationHelper.cs" />
     <Compile Include="Models\NavigationObject.cs" />
     <Compile Include="Models\Roles.cs" />

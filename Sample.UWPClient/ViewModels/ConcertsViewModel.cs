@@ -52,12 +52,11 @@ namespace Sample.UWPClient.ViewModels
 
         public async Task GetConcerts()
         {
-            RestMeta restMeta = AppUser.RestMetas.Where(rm => rm.Method.Equals("GetConcerts"))
-                                                 .FirstOrDefault();
+            RestMethod restMethod = AppUser.GetMethod<Concert>(MethodType.Get);
 
-            if (restMeta != null)
+            if (restMethod != null)
             {
-                List<Concert> concerts = await concertService.GetConcertsAsync(restMeta.Ref);
+                List<Concert> concerts = await concertService.GetConcertsAsync(restMethod);
 
                 foreach (var item in concerts)
                 {

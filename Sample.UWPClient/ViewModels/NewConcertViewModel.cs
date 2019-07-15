@@ -1,4 +1,5 @@
-﻿using Sample.DTO.Models;
+﻿using Newtonsoft.Json;
+using Sample.DTO.Models;
 using Sample.RestHelper.Models;
 using Sample.UWPClient.Models;
 using Sample.UWPClient.Services;
@@ -50,12 +51,13 @@ namespace Sample.UWPClient.ViewModels
 
         public async Task CreateConcert()
         {
-            RestMeta restMeta = AppUser.RestMetas.Where(rm => rm.Method.Equals("CreateConcert"))
-                                                 .FirstOrDefault();
+            RestMethod restMethod = AppUser.GetMethod<Concert>(MethodType.Post, !string.IsNullOrEmpty("HasParameter"));
 
-            if(restMeta != null)
+            if (restMethod != null)
             {
-                Concert = await concertService.CreateConcertAsync(Concert, restMeta.Ref);
+                restMethod.JsonBody = JsonConvert.SerializeObject(Concert);
+
+                Concert = await concertService.CreateConcertAsync(restMethod);
             }
         }
     }

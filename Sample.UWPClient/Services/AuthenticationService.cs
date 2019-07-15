@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Windows.Security.Cryptography.Certificates;
+using Windows.Web.Http;
 using Windows.Web.Http.Filters;
 using Windows.Web.Http.Headers;
 
@@ -17,7 +18,7 @@ namespace Sample.UWPClient.Services
            public async Task<AppUser> LoginAsync(Login login)
            {
                 string result = await HttpRequestWithToken("https://localhost:5001/api/Authentication/Login",
-                                                           Windows.Web.Http.HttpMethod.Post,
+                                                           HttpMethod.Post,
                                                            JsonConvert.SerializeObject(login));
 
 
@@ -27,7 +28,7 @@ namespace Sample.UWPClient.Services
             public async Task<AppUser> RegistrationAsync(Registration registration)
             {
                 string result = await HttpRequestWithToken("https://localhost:5001/api/Authentication/Registration",
-                                                           Windows.Web.Http.HttpMethod.Post,
+                                                           HttpMethod.Post,
                                                            JsonConvert.SerializeObject(registration));
 
 

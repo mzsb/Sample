@@ -45,9 +45,9 @@ namespace Sample.WebAPI.Controllers
             {
                 var mapped = mapper.Map<AppUser>(appUser);
 
-                mapped.RestMetas.Add(new RestMeta { Method = "GetConcerts", Ref = "https://localhost:5001/api/Concert" });
+                mapped.AddMethod<Concert>(MethodType.Get);
 
-                mapped.RestMetas.Add(new RestMeta { Method = "CreateConcert", Ref = $"https://localhost:5001/api/Concert/{mapped.Id}" });
+                mapped.AddMethod<Concert>(MethodType.Post, mapped.Id.ToString());
 
                 return Ok(mapped);
             }
@@ -66,9 +66,9 @@ namespace Sample.WebAPI.Controllers
             {
                 var mapped = mapper.Map<AppUser>(appUser);
 
-                mapped.RestMetas.Add(new RestMeta { Method = "GetConcerts", Ref = "https://localhost:5001/api/Concert" });
+                mapped.AddMethod<Concert>(MethodType.Get);
 
-                mapped.RestMetas.Add(new RestMeta { Method = "CreateConcert", Ref = $"https://localhost:5001/api/Concert/{mapped.Id}" });
+                mapped.AddMethod<Concert>(MethodType.Post, mapped.Id.ToString());
 
                 return Ok(mapped);
             }

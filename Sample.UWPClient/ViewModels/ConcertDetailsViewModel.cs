@@ -61,12 +61,11 @@ namespace Sample.UWPClient.ViewModels
 
         public async Task GetConcertDetails()
         {
-            RestMeta restMeta = Concert.RestMetas.Where(rm => rm.Method.Equals("GetConcertDetails"))
-                                                 .FirstOrDefault();
+            RestMethod restMethod = Concert.GetMethod<Concert>(MethodType.Get, !string.IsNullOrEmpty("HasParameter"));
 
-            if(restMeta != null)
+            if(restMethod != null)
             {
-                Concert = await concertService.GetConcertsDetailsAsync(restMeta.Ref);
+                Concert = await concertService.GetConcertsDetailsAsync(restMethod);
             }
         }
     }

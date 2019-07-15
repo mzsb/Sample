@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Sample.DTO.Models
 {
-    public class Concert : RestMetaHolder
+    public class Concert : RestMethodHolder
     {
         public Guid Id { get; set; }
         public Guid AppUserId { get; set; }

@@ -42,7 +42,7 @@ namespace Sample.WebAPI.Controllers
         {
             foreach (var concert in concerts)
             {
-                concert.RestMetas.Add(new RestMeta { Method = "GetConcertDetails", Ref = $"https://localhost:5001/api/Concert/{concert.Id}" });
+                concert.AddMethod<Concert>(MethodType.Get, concert.Id.ToString());
             }
 
             return concerts;
