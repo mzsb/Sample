@@ -29,7 +29,7 @@
           "Microsoft.AspNetCore.Razor.Design": "2.2.0",
           "Microsoft.NETCore.App": "2.2.0",
           "Sample.BLL": "1.0.0",
-          "Sample.RestHelper": "1.0.0",
+          "Sample.DTO": "1.0.0",
           "xunit.extensibility.core": "2.4.1"
         },
         "runtime": {
@@ -287,6 +287,17 @@
         },
         "compile": {
           "Sample.DAL.dll": {}
+        }
+      },
+      "Sample.DTO/1.0.0": {
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "runtime": {
+          "Sample.DTO.dll": {}
+        },
+        "compile": {
+          "Sample.DTO.dll": {}
         }
       },
       "Sample.RestHelper/1.0.0": {
@@ -3393,6 +3404,11 @@
       "sha512": ""
     },
     "Sample.DAL/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Sample.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

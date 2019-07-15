@@ -4,14 +4,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sample.WebAPI.Dtos
+namespace Sample.DTO.Models
 {
-    public class Concert
+    public class Concert : RestMetaHolder
     {
         public Guid Id { get; set; }
         public Guid AppUserId { get; set; }
 
         public string Name { get; set; }
-        public ICollection<RestMeta> RestMetas { get; set; } = new List<RestMeta>();
     }
 }

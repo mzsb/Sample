@@ -12,6 +12,8 @@ namespace Sample.UWPClient.Services
 {
     public abstract class ServiceBase
     {
+        public static string Token { get; set; } = string.Empty;
+
         protected async Task<string> HttpRequestWithToken(string url, Windows.Web.Http.HttpMethod method, string body = "")
         {
             var filter = new HttpBaseProtocolFilter();
@@ -25,9 +27,9 @@ namespace Sample.UWPClient.Services
                 try
                 {
                     var request = new Windows.Web.Http.HttpRequestMessage(method, new Uri(url));
-                    if (Token.Value != string.Empty)
+                    if (Token != string.Empty)
                     {
-                        request.Headers.Authorization = new HttpCredentialsHeaderValue("Bearer", Token.Value);
+                        request.Headers.Authorization = new HttpCredentialsHeaderValue("Bearer", Token);
                     }
                     if (body != string.Empty)
                     {

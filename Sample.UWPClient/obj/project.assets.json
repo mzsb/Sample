@@ -316,6 +316,19 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        }
+      },
       "Sample.RestHelper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -819,6 +832,19 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
         }
       },
       "Sample.RestHelper/1.0.0": {
@@ -1327,6 +1353,19 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        }
+      },
       "Sample.RestHelper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -1833,6 +1872,19 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        }
+      },
       "Sample.RestHelper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -2336,6 +2388,19 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
         }
       },
       "Sample.RestHelper/1.0.0": {
@@ -2844,6 +2909,19 @@
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
         }
       },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        }
+      },
       "Sample.RestHelper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -3347,6 +3425,19 @@
         },
         "native": {
           "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll": {}
+        }
+      },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
         }
       },
       "Sample.RestHelper/1.0.0": {
@@ -3853,6 +3944,19 @@
         "build": {
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props": {},
           "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.targets": {}
+        }
+      },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
         }
       },
       "Sample.RestHelper/1.0.0": {
@@ -8325,6 +8429,11 @@
         "runtimes/win10-x86/nativeassets/uap10.0.15138/clrcompression.dll"
       ]
     },
+    "Sample.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Sample.DTO/Sample.DTO.csproj",
+      "msbuildProject": "../Sample.DTO/Sample.DTO.csproj"
+    },
     "Sample.RestHelper/1.0.0": {
       "type": "project",
       "path": "../Sample.RestHelper/Sample.RestHelper.csproj",
@@ -8335,6 +8444,7 @@
     "UAP,Version=v10.0.17134": [
       "Microsoft.NETCore.UniversalWindowsPlatform >= 6.2.8",
       "Newtonsoft.Json >= 12.0.2",
+      "Sample.DTO >= 1.0.0",
       "Sample.RestHelper >= 1.0.0"
     ]
   },
@@ -8369,6 +8479,9 @@
       "frameworks": {
         "uap10.0.17134": {
           "projectReferences": {
+            "C:\\Users\\mozs.barnabas\\Sample\\Sample.DTO\\Sample.DTO.csproj": {
+              "projectPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.DTO\\Sample.DTO.csproj"
+            },
             "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj": {
               "projectPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj"
             }

@@ -1,5 +1,5 @@
 ﻿using AutoMapper;
-using Sample.WebAPI.Dtos;
+using Sample.DTO.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

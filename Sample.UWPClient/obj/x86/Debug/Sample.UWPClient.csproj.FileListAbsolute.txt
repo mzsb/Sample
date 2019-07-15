@@ -64,3 +64,5 @@ C:\Users\mozs.barnabas\Sample\Sample.UWPClient\obj\x86\Debug\Styles\CommonStyle.
 C:\Users\mozs.barnabas\Sample\Sample.UWPClient\obj\x86\Debug\Styles\CommonStyle.xbf
 C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.RestHelper.dll
 C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.RestHelper.pdb
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.DTO.dll
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.DTO.pdb

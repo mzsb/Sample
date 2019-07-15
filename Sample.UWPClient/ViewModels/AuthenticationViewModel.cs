@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
 using Sample.UWPClient.Helper;
-using Sample.RestHelper.Models;
+using Sample.DTO.Models;
 
 namespace Sample.UWPClient.ViewModels
 {
@@ -21,9 +21,7 @@ namespace Sample.UWPClient.ViewModels
 
         public readonly AuthenticationService authenticationService = new AuthenticationService();
 
-        public DataFrame<AppUser> DataFrame { get; set; }
-
-        public AppUser appUser { get; set; }
+        public AppUser AppUser { get; set; }
 
         private Login login = new Login();
 
@@ -83,46 +81,24 @@ namespace Sample.UWPClient.ViewModels
             }
         }
 
-        public async Task<AppUser> LoginAsync()
+        public async Task LoginAsync()
         {
             if (await Login.IsValid())
             {
-                DataFrame<AppUser> dataFrame = await authenticationService.LoginAsync(Login);
+                AppUser = await authenticationService.LoginAsync(Login);
 
-                var appUser = dataFrame.DataObject;
-
-                DataFrame = dataFrame;
-
-                if (appUser != null)
-                {
-                    return appUser;
-                }
-                else
-                {
-                    await new MessageDialog("Sikertelen bejelentkezés!").ShowAsync();
-                }
+                ServiceBase.Token = AppUser.Token ?? string.Empty;
             }
-
-            return null;
         }
 
-        public async Task<AppUser> RegistrationAsync()
+        public async Task RegistrationAsync()
         {
             if(await Registration.IsValid())
             {
-                AppUser appUser = await authenticationService.RegistrationAsync(Registration);
+                AppUser = await authenticationService.RegistrationAsync(Registration);
 
-                if (appUser != null)
-                {
-                    return appUser;
-                }
-                else
-                {
-                    await new MessageDialog("Sikertelen regisztráció!").ShowAsync();
-                }
+                ServiceBase.Token = AppUser.Token ?? string.Empty;
             }
-
-            return null;
         }
     }
 }

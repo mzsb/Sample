@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Sample.UWPClient.Helper;
+using Sample.DTO.Models;
+using Windows.UI.Popups;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -42,8 +44,10 @@ namespace Sample.UWPClient.Views
 
             viewModel.Login.UserName = navObj.Get<AppUser>().UserName;
 
+            /// Temp ///
             viewModel.Login.UserName = "Admin";
             viewModel.Login.Password = "J1ezdmeg+";
+            /// Temp ///
 
             base.OnNavigatedTo(e);
         }
@@ -53,26 +57,30 @@ namespace Sample.UWPClient.Views
 
         private async void Login_ClickAsync(object sender, RoutedEventArgs e)
         {
-            var appUser = await viewModel.LoginAsync();
+            await viewModel.LoginAsync();
 
-            if(appUser != null)
+            if(viewModel.AppUser != null)
             {
-                Token.Value = appUser.Token;
+                NavigateToConcertsPage();
             }
-
-            NavigateToConcertsPage(appUser);
+            else
+            {
+                await new MessageDialog("Sikertelen bejelentkezés!").ShowAsync();
+            }
         }
 
         private async void Registration_ClickAsync(object sender, RoutedEventArgs e)
         {
-            AppUser appUser = await viewModel.RegistrationAsync();
+            await viewModel.RegistrationAsync();
 
-            if (appUser != null)
+            if (viewModel.AppUser != null)
             {
-                Token.Value = appUser.Token;
+                NavigateToConcertsPage();
             }
-
-            NavigateToConcertsPage(appUser);
+            else
+            {
+                await new MessageDialog("Sikertelen regisztráció!").ShowAsync();
+            }
         }
 
         private void NewUser_Click(object sender, RoutedEventArgs e)
@@ -92,13 +100,10 @@ namespace Sample.UWPClient.Views
 
         // Navigacio //
 
-        private void NavigateToConcertsPage(AppUser appUser)
+        private void NavigateToConcertsPage()
         {
-            if (appUser != null)
-            {
-                Frame.Navigate(typeof(ConcertsPage), 
-                               new NavigationObject().Add(appUser, viewModel.DataFrame));
-            }
+            Frame.Navigate(typeof(ConcertsPage), 
+                           new NavigationObject().Add(viewModel.AppUser));
         }
     }
 }

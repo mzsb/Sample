@@ -1,4 +1,5 @@
-﻿using Sample.RestHelper.Models;
+﻿using Sample.DTO.Models;
+using Sample.RestHelper.Models;
 using Sample.UWPClient.Models;
 using Sample.UWPClient.Services;
 using System;
@@ -12,8 +13,6 @@ namespace Sample.UWPClient.ViewModels
 {
     class NewConcertViewModel : INotifyPropertyChanged
     {
-        public DataFrame<AppUser> DataFrame { get; set; }
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         private readonly ConcertService concertService = new ConcertService();
@@ -33,6 +32,7 @@ namespace Sample.UWPClient.ViewModels
             }
         }
 
+
         private Concert concert = new Concert { Name = "teszt" };
 
         public Concert Concert
@@ -48,17 +48,15 @@ namespace Sample.UWPClient.ViewModels
             }
         }
 
-        public async Task<Concert> CreateConcert()
+        public async Task CreateConcert()
         {
-            RestMeta restMeta = DataFrame.RestMetas.Where(rm => rm.Method.Equals("CreateConcert"))
+            RestMeta restMeta = AppUser.RestMetas.Where(rm => rm.Method.Equals("CreateConcert"))
                                                  .FirstOrDefault();
 
             if(restMeta != null)
             {
-                return await concertService.CreateConcertAsync(Concert, restMeta);
+                Concert = await concertService.CreateConcertAsync(Concert, restMeta.Ref);
             }
-
-            return null;
         }
     }
 }

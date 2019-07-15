@@ -17,6 +17,7 @@ using Windows.UI.Xaml.Navigation;
 using Sample.UWPClient.Helper;
 using Windows.UI.Core;
 using Sample.RestHelper.Models;
+using Sample.DTO.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -41,7 +42,7 @@ namespace Sample.UWPClient.Views
 
             var appUser = navObj.Get<AppUser>();
 
-            viewModel.DataFrame = navObj.Get<DataFrame<AppUser>>();
+            viewModel.AppUser = navObj.Get<AppUser>();
 
             if (appUser is AppUser)
             {

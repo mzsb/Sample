@@ -1,4 +1,5 @@
-﻿using Sample.RestHelper.Models;
+﻿using Sample.DTO.Models;
+using Sample.RestHelper.Models;
 using Sample.UWPClient.Models;
 using Sample.UWPClient.Services;
 using System;
@@ -13,7 +14,6 @@ namespace Sample.UWPClient.ViewModels
 {
     class ConcertsViewModel : INotifyPropertyChanged
     {
-        public DataFrame<AppUser> DataFrame { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -52,12 +52,12 @@ namespace Sample.UWPClient.ViewModels
 
         public async Task GetConcerts()
         {
-            RestMeta restMeta = DataFrame.RestMetas.Where(rm => rm.Method.Equals("GetConcerts"))
-                                                   .FirstOrDefault();
+            RestMeta restMeta = AppUser.RestMetas.Where(rm => rm.Method.Equals("GetConcerts"))
+                                                 .FirstOrDefault();
 
             if (restMeta != null)
             {
-                List<Concert> concerts = await concertService.GetConcertsAsync(restMeta);
+                List<Concert> concerts = await concertService.GetConcertsAsync(restMeta.Ref);
 
                 foreach (var item in concerts)
                 {

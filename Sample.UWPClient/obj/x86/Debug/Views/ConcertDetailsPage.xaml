@@ -19,8 +19,12 @@
             
             <NavigationViewItemHeader Content="Adminisztráció" 
                                       Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
-            
-            <NavigationViewItem x:ConnectionId='3' Icon="Add"
+
+            <NavigationViewItem x:ConnectionId='3' Icon="AllApps"
+                                Content="Koncertek"
+                                                       />
+
+            <NavigationViewItem x:ConnectionId='4' Icon="Add"
                                 Content="Új koncert"
                                                          
                                 Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
@@ -29,7 +33,7 @@
 
         <NavigationView.PaneFooter>
 
-            <NavigationViewItem x:ConnectionId='4' Icon="MoveToFolder"
+            <NavigationViewItem x:ConnectionId='5' Icon="MoveToFolder"
                                 Content="Kijelentkezés"
                                                       />
 
@@ -37,7 +41,7 @@
 
         <Grid>
            
-            <TextBlock x:ConnectionId='5' x:Name="PageHeader"
+            <TextBlock x:ConnectionId='6' x:Name="PageHeader"
                        Grid.Row="0"
                        Grid.Column="0"
                        Text="{Binding Concert.Name}"

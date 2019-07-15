@@ -1,4 +1,5 @@
-﻿using Sample.UWPClient.Helper;
+﻿using Sample.DTO.Models;
+using Sample.UWPClient.Helper;
 using Sample.UWPClient.Models;
 using Sample.UWPClient.ViewModels;
 using System;
@@ -60,6 +61,11 @@ namespace Sample.UWPClient.Views
         {
             NavigateToConcertsPage();
         }
+        private void Concerts_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToConcertsPage();
+        }
+
         private void NewConcert_Click(object sender, RoutedEventArgs e)
         {
             NavigateToNewConcertPage();

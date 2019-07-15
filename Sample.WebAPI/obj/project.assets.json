@@ -4370,6 +4370,19 @@
           "bin/placeholder/Sample.DAL.dll": {}
         }
       },
+      "Sample.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Sample.RestHelper": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Sample.DTO.dll": {}
+        }
+      },
       "Sample.RestHelper/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -11738,6 +11751,11 @@
       "path": "../Sample.DAL/Sample.DAL.csproj",
       "msbuildProject": "../Sample.DAL/Sample.DAL.csproj"
     },
+    "Sample.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Sample.DTO/Sample.DTO.csproj",
+      "msbuildProject": "../Sample.DTO/Sample.DTO.csproj"
+    },
     "Sample.RestHelper/1.0.0": {
       "type": "project",
       "path": "../Sample.RestHelper/Sample.RestHelper.csproj",
@@ -11751,7 +11769,7 @@
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
       "Sample.BLL >= 1.0.0",
-      "Sample.RestHelper >= 1.0.0",
+      "Sample.DTO >= 1.0.0",
       "xunit.extensibility.core >= 2.4.1"
     ]
   },
@@ -11788,8 +11806,8 @@
             "C:\\Users\\mozs.barnabas\\Sample\\Sample.BLL\\Sample.BLL.csproj": {
               "projectPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.BLL\\Sample.BLL.csproj"
             },
-            "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj": {
-              "projectPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.RestHelper\\Sample.RestHelper.csproj"
+            "C:\\Users\\mozs.barnabas\\Sample\\Sample.DTO\\Sample.DTO.csproj": {
+              "projectPath": "C:\\Users\\mozs.barnabas\\Sample\\Sample.DTO\\Sample.DTO.csproj"
             }
           }
         }

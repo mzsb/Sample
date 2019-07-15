@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Sample.WebAPI.Dtos
+namespace Sample.DTO.Models
 {
-    public class AppUser
+    public class AppUser : RestMetaHolder
     {
         public Guid Id { get; set; }
 

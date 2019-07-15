@@ -34,6 +34,9 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.8\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.DTO.dll">
+      <PackagePath>Sample.DTO.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.RestHelper\bin\Debug\netstandard2.0\Sample.RestHelper.dll">
       <PackagePath>Sample.RestHelper.dll</PackagePath>
     </AppxPackagedFile>

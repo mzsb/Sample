@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Sample.RestHelper.Models;
+using Sample.DTO.Models;
 using Sample.UWPClient.Models;
 using System;
 using System.Collections.Generic;
@@ -13,25 +13,25 @@ namespace Sample.UWPClient.Services
 {
     public class ConcertService : ServiceBase
     {
-        public async Task<List<Concert>> GetConcertsAsync(RestMeta restMeta)
+        public async Task<List<Concert>> GetConcertsAsync(string requestUri)
         {
-            string result = await HttpRequestWithToken(restMeta.Ref,
+            string result = await HttpRequestWithToken(requestUri,
                                                        HttpMethod.Get);
 
             return JsonConvert.DeserializeObject<List<Concert>>(result) ?? new List<Concert>();
         }
 
-        public async Task<Concert> GetConcertsDetailsAsync(RestMeta restMeta)
+        public async Task<Concert> GetConcertsDetailsAsync(string requestUri)
         {
-            string result = await HttpRequestWithToken(restMeta.Ref,
+            string result = await HttpRequestWithToken(requestUri,
                                                        HttpMethod.Get);
 
             return JsonConvert.DeserializeObject<Concert>(result);
         }
 
-        public async Task<Concert> CreateConcertAsync(Concert concert, RestMeta restMeta)
+        public async Task<Concert> CreateConcertAsync(Concert concert, string requestUri)
         {
-            string result = await HttpRequestWithToken(restMeta.Ref,
+            string result = await HttpRequestWithToken(requestUri,
                                                        HttpMethod.Post,
                                                        JsonConvert.SerializeObject(concert));
 

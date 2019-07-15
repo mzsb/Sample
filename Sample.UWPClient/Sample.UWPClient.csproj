@@ -124,13 +124,8 @@
     <Compile Include="Helper\AppUserHelper.cs" />
     <Compile Include="Helper\LoginHelper.cs" />
     <Compile Include="Helper\RegistrationHelper.cs" />
-    <Compile Include="Models\AppUser.cs" />
-    <Compile Include="Models\Concert.cs" />
-    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\NavigationObject.cs" />
-    <Compile Include="Models\Registration.cs" />
     <Compile Include="Models\Roles.cs" />
-    <Compile Include="Models\Token.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\AuthenticationService.cs" />
     <Compile Include="Services\ConcertService.cs" />
@@ -205,8 +200,12 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Sample.DTO\Sample.DTO.csproj">
+      <Project>{25171002-66be-40f7-a1a7-c9cda45000ab}</Project>
+      <Name>Sample.DTO</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Sample.RestHelper\Sample.RestHelper.csproj">
-      <Project>{ed60fc94-7649-4a84-8efb-bfbde650e4bf}</Project>
+      <Project>{ED60FC94-7649-4A84-8EFB-BFBDE650E4BF}</Project>
       <Name>Sample.RestHelper</Name>
     </ProjectReference>
   </ItemGroup>

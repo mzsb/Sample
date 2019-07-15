@@ -14,7 +14,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Sample.BLL\Sample.BLL.csproj" />
-    <ProjectReference Include="..\Sample.RestHelper\Sample.RestHelper.csproj" />
+    <ProjectReference Include="..\Sample.DTO\Sample.DTO.csproj" />
   </ItemGroup>
 
 

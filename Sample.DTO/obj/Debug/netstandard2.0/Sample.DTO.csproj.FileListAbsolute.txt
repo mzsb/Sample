@@ -1,0 +1,14 @@
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.DTO.deps.json
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.DTO.dll
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.DTO.pdb
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.RestHelper.dll
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.dll
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.RestHelper.pdb
+C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\System.ComponentModel.Annotations.xml
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.csprojAssemblyReference.cache
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.csproj.CoreCompileInputs.cache
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.AssemblyInfoInputs.cache
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.AssemblyInfo.cs
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.csproj.CopyComplete
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.dll
+C:\Users\mozs.barnabas\Sample\Sample.DTO\obj\Debug\netstandard2.0\Sample.DTO.pdb

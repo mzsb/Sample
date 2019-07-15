@@ -4,10 +4,8 @@ using System.Text;
 
 namespace Sample.RestHelper.Models
 {
-    public class DataFrame<T>
+    public abstract class RestMetaHolder
     {
-        public T DataObject { get; set; }
-
         public List<RestMeta> RestMetas { get; set; } = new List<RestMeta>();
     }
 }

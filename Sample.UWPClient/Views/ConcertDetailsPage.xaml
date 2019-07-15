@@ -19,7 +19,11 @@
             
             <NavigationViewItemHeader Content="Adminisztráció" 
                                       Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
-            
+
+            <NavigationViewItem Icon="AllApps"
+                                Content="Koncertek"
+                                Tapped="Concerts_Click"/>
+
             <NavigationViewItem Icon="Add"
                                 Content="Új koncert"
                                 Tapped="NewConcert_Click"

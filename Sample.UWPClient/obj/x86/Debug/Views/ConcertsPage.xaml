@@ -18,6 +18,9 @@
             <NavigationViewItemHeader Content="Adminisztráció" 
                                       Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
 
+            <NavigationViewItem Icon="AllApps"
+                                Content="Koncertek"/>
+
             <NavigationViewItem x:ConnectionId='2' Icon="Add"
                                 Content="Új koncert"
                                                          

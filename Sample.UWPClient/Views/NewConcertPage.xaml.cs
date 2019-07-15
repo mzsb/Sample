@@ -1,4 +1,5 @@
-﻿using Sample.RestHelper.Models;
+﻿using Sample.DTO.Models;
+using Sample.RestHelper.Models;
 using Sample.UWPClient.Helper;
 using Sample.UWPClient.Models;
 using Sample.UWPClient.ViewModels;
@@ -39,8 +40,6 @@ namespace Sample.UWPClient.Views
         {
             var navObj = new NavigationObject(e.Parameter);
 
-            viewModel.DataFrame = navObj.Get<DataFrame<AppUser>>();
-
             viewModel.AppUser = navObj.Get<AppUser>();
 
             base.OnNavigatedTo(e);
@@ -49,13 +48,18 @@ namespace Sample.UWPClient.Views
 
         // Esemenykezelok //
 
+        private void Concerts_Click(object sender, RoutedEventArgs e)
+        {
+            NavigateToConcertsPage();
+        }
+
         private async void CreateConcert_Click(object sender, RoutedEventArgs e)
         {
-            Concert concert = await viewModel.CreateConcert();
+            await viewModel.CreateConcert();
 
-            if(concert != null)
+            if(viewModel.Concert != null)
             {
-                NavigateToConcertDetailsPage(concert);
+                NavigateToConcertDetailsPage();
             }
         }
 
@@ -77,6 +81,12 @@ namespace Sample.UWPClient.Views
                            new NavigationObject().Add(viewModel.AppUser));
         }
 
+        private void NavigateToConcertsPage()
+        {
+            Frame.Navigate(typeof(ConcertsPage),
+                           new NavigationObject().Add(viewModel.AppUser));
+        }
+
         private void NavigateBack()
         {
             if (Frame.CanGoBack)
@@ -85,10 +95,10 @@ namespace Sample.UWPClient.Views
             }
         }
 
-        private void NavigateToConcertDetailsPage(Concert concert)
+        private void NavigateToConcertDetailsPage()
         {
             Frame.Navigate(typeof(ConcertDetailsPage),
-                           new NavigationObject().Add(viewModel.AppUser, concert));
+                           new NavigationObject().Add(viewModel.AppUser, viewModel.Concert));
         }
     }
 }

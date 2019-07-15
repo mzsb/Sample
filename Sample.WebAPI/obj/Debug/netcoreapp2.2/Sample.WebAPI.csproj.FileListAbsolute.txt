@@ -19,3 +19,5 @@ C:\Users\mozs.barnabas\Sample\Sample.WebAPI\obj\Debug\netcoreapp2.2\Sample.WebAP
 C:\Users\mozs.barnabas\Sample\Sample.WebAPI\obj\Debug\netcoreapp2.2\Sample.WebAPI.pdb
 C:\Users\mozs.barnabas\Sample\Sample.WebAPI\bin\Debug\netcoreapp2.2\Sample.RestHelper.dll
 C:\Users\mozs.barnabas\Sample\Sample.WebAPI\bin\Debug\netcoreapp2.2\Sample.RestHelper.pdb
+C:\Users\mozs.barnabas\Sample\Sample.WebAPI\bin\Debug\netcoreapp2.2\Sample.DTO.dll
+C:\Users\mozs.barnabas\Sample\Sample.WebAPI\bin\Debug\netcoreapp2.2\Sample.DTO.pdb

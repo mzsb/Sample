@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Sample.BLL.Interfaces;
 using Sample.BLL.Services;
-using Sample.WebAPI.Dtos;
+using Sample.DTO.Models;
 
 namespace Sample.WebAPI.Controllers
 {

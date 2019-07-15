@@ -14,6 +14,10 @@
 
             <NavigationViewItemHeader Content="Adminisztráció"/>
 
+            <NavigationViewItem Icon="AllApps"
+                                Content="Koncertek"
+                                Tapped="Concerts_Click"/>
+
             <NavigationViewItem Icon="Add"
                                 Content="Új koncert"/>
 

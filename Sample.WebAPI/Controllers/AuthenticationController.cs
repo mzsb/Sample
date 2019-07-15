@@ -3,9 +3,8 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
-using Sample.BLL.AuthenticationModels;
 using Sample.BLL.Interfaces;
-using Sample.DAL.Entities;
+using Sample.DTO.Models;
 using Sample.RestHelper.Models;
 using System;
 using System.Collections.Generic;
@@ -36,50 +35,42 @@ namespace Sample.WebAPI.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<DataFrame<Dtos.AppUser>>> Login([FromBody] Dtos.Login login)
+        public async Task<ActionResult<AppUser>> Login([FromBody] Login login)
         {
             login.Secret = appSettings.Secret;
 
-            var appUser = await authenticationService.Login(mapper.Map<Login>(login));
+            var appUser = await authenticationService.Login(mapper.Map<BLL.AuthenticationModels.Login>(login));
 
             if(appUser != null)
             {
-                DataFrame<Dtos.AppUser> dataFrame = new DataFrame<Dtos.AppUser>();
+                var mapped = mapper.Map<AppUser>(appUser);
 
-                var mapped = mapper.Map<Dtos.AppUser>(appUser);
+                mapped.RestMetas.Add(new RestMeta { Method = "GetConcerts", Ref = "https://localhost:5001/api/Concert" });
 
-                dataFrame.DataObject = mapped;
+                mapped.RestMetas.Add(new RestMeta { Method = "CreateConcert", Ref = $"https://localhost:5001/api/Concert/{mapped.Id}" });
 
-                dataFrame.RestMetas.Add(new RestMeta { Method = "GetConcerts", Ref = "https://localhost:5001/api/Concert" });
-
-                dataFrame.RestMetas.Add(new RestMeta { Method = "CreateConcert", Ref = $"https://localhost:5001/api/Concert/{mapped.Id}" });
-
-                return Ok(dataFrame);
+                return Ok(mapped);
             }
 
             return Unauthorized();
         }
 
         [HttpPost("Registration")]
-        public async Task<ActionResult<DataFrame<Dtos.AppUser>>> Registration([FromBody] Dtos.Registration registration)
+        public async Task<ActionResult<AppUser>> Registration([FromBody] Registration registration)
         {
             registration.Secret = appSettings.Secret;
 
-            var appUser = await authenticationService.Registration(mapper.Map<Registration>(registration));
+            var appUser = await authenticationService.Registration(mapper.Map<BLL.AuthenticationModels.Registration>(registration));
 
             if (appUser != null)
             {
-                DataFrame<Dtos.AppUser> dataFrame = new DataFrame<Dtos.AppUser>();
+                var mapped = mapper.Map<AppUser>(appUser);
 
-                var mapped = mapper.Map<Dtos.AppUser>(appUser);
+                mapped.RestMetas.Add(new RestMeta { Method = "GetConcerts", Ref = "https://localhost:5001/api/Concert" });
 
-                dataFrame.DataObject = mapped;
+                mapped.RestMetas.Add(new RestMeta { Method = "CreateConcert", Ref = $"https://localhost:5001/api/Concert/{mapped.Id}" });
 
-                dataFrame.RestMetas.Add(new RestMeta { Method = "GetConcerts", Ref = "https://localhost:5001/api/Concert" });
-
-                dataFrame.RestMetas.Add(new RestMeta { Method = "CreateConcert", Ref = $"https://localhost:5001/api/Concert/{mapped.Id}" });
-
-                return Ok(dataFrame);
+                return Ok(mapped);
             }
 
             return Unauthorized();

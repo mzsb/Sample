@@ -1,4 +1,5 @@
-﻿using Sample.UWPClient.Models;
+﻿using Sample.DTO.Models;
+using Sample.UWPClient.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,5 @@
 ﻿using Newtonsoft.Json;
-using Sample.RestHelper.Models;
+using Sample.DTO.Models;
 using Sample.UWPClient.Models;
 using System;
 using System.Collections.Generic;
@@ -14,14 +14,14 @@ namespace Sample.UWPClient.Services
 {
     public class AuthenticationService : ServiceBase
     {
-           public async Task<DataFrame<AppUser>> LoginAsync(Login login)
+           public async Task<AppUser> LoginAsync(Login login)
            {
                 string result = await HttpRequestWithToken("https://localhost:5001/api/Authentication/Login",
                                                            Windows.Web.Http.HttpMethod.Post,
                                                            JsonConvert.SerializeObject(login));
 
 
-                return JsonConvert.DeserializeObject<DataFrame<AppUser>>(result);
+                return JsonConvert.DeserializeObject<AppUser>(result);
            }
 
             public async Task<AppUser> RegistrationAsync(Registration registration)

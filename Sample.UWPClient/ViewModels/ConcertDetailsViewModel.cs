@@ -1,4 +1,5 @@
-﻿using Sample.RestHelper.Models;
+﻿using Sample.DTO.Models;
+using Sample.RestHelper.Models;
 using Sample.UWPClient.Models;
 using Sample.UWPClient.Services;
 using System;
@@ -65,7 +66,7 @@ namespace Sample.UWPClient.ViewModels
 
             if(restMeta != null)
             {
-                Concert = await concertService.GetConcertsDetailsAsync(restMeta);
+                Concert = await concertService.GetConcertsDetailsAsync(restMeta.Ref);
             }
         }
     }

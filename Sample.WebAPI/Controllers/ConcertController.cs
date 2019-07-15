@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Sample.DTO.Models;
 using Sample.RestHelper.Models;
-using Sample.WebAPI.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -38,7 +38,7 @@ namespace Sample.WebAPI.Controllers
         };
 
         [HttpGet]
-        public async Task<ActionResult<List<Dtos.Concert>>> GetConcertsAsync()
+        public async Task<ActionResult<List<Concert>>> GetConcertsAsync()
         {
             foreach (var concert in concerts)
             {
@@ -49,14 +49,14 @@ namespace Sample.WebAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Dtos.Concert>> GetConcertByIdAsync(Guid Id)
+        public async Task<ActionResult<Concert>> GetConcertByIdAsync(Guid Id)
         {
             return concerts.Where(c => c.Id.Equals(Id))
                            .SingleOrDefault();
         }
 
         [HttpPost("{appUserId}")]
-        public async Task<ActionResult<Dtos.Concert>> CreateConcertAsync(Guid appUserId, [FromBody]Concert concert)
+        public async Task<ActionResult<Concert>> CreateConcertAsync(Guid appUserId, [FromBody]Concert concert)
         {
             Guid id = Guid.NewGuid();
             Ids.Add(id);
