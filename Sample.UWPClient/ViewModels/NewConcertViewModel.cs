@@ -16,7 +16,7 @@ namespace Sample.UWPClient.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private readonly ConcertService concertService = new ConcertService();
+        private readonly HttpService httpService = new HttpService();
 
         private AppUser appUser = new AppUser();
 
@@ -57,7 +57,7 @@ namespace Sample.UWPClient.ViewModels
             {
                 restMethod.JsonBody = JsonConvert.SerializeObject(Concert);
 
-                Concert = await concertService.CreateConcertAsync(restMethod);
+                Concert = await httpService.HttpRequestAsync<Concert>(restMethod);
             }
         }
     }

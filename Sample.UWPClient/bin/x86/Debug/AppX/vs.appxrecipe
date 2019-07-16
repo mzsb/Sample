@@ -30,13 +30,13 @@
     <AppXManifest Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-07-15T11:54:43.686</Modified>
+      <Modified>2019-07-16T06:36:31.497</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.UWPClient.exe">
       <PackagePath>entrypoint\Sample.UWPClient.exe</PackagePath>
-      <Modified>2019-07-15T11:54:42.627</Modified>
+      <Modified>2019-07-16T06:36:30.095</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\.nuget\packages\newtonsoft.json\12.0.2\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -48,11 +48,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.DTO\bin\Debug\netstandard2.0\Sample.DTO.dll">
       <PackagePath>Sample.DTO.dll</PackagePath>
-      <Modified>2019-07-15T11:54:34.347</Modified>
+      <Modified>2019-07-16T06:36:22.112</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.RestHelper\bin\Debug\netstandard2.0\Sample.RestHelper.dll">
       <PackagePath>Sample.RestHelper.dll</PackagePath>
-      <Modified>2019-07-15T11:54:34.040</Modified>
+      <Modified>2019-07-16T06:36:21.859</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.17763.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
@@ -102,27 +102,27 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-07-15T11:54:42.295</Modified>
+      <Modified>2019-07-16T06:36:29.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Styles\CommonStyle.xbf">
       <PackagePath>Styles\CommonStyle.xbf</PackagePath>
-      <Modified>2019-07-15T11:54:42.295</Modified>
+      <Modified>2019-07-16T06:36:29.764</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Views\AuthenticationPage.xbf">
       <PackagePath>Views\AuthenticationPage.xbf</PackagePath>
-      <Modified>2019-07-15T11:54:42.296</Modified>
+      <Modified>2019-07-16T06:36:29.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Views\ConcertDetailsPage.xbf">
       <PackagePath>Views\ConcertDetailsPage.xbf</PackagePath>
-      <Modified>2019-07-15T11:54:42.296</Modified>
+      <Modified>2019-07-16T06:36:29.765</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Views\ConcertsPage.xbf">
       <PackagePath>Views\ConcertsPage.xbf</PackagePath>
-      <Modified>2019-07-15T11:54:42.296</Modified>
+      <Modified>2019-07-16T06:36:29.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Views\NewConcertPage.xbf">
       <PackagePath>Views\NewConcertPage.xbf</PackagePath>
-      <Modified>2019-07-15T11:54:42.297</Modified>
+      <Modified>2019-07-16T06:36:29.766</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.17763.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -130,11 +130,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-07-15T10:41:36.815</Modified>
+      <Modified>2019-07-16T06:36:30.625</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Core\Sample.UWPClient.exe">
       <PackagePath>Sample.UWPClient.exe</PackagePath>
-      <Modified>2019-07-15T11:54:43.673</Modified>
+      <Modified>2019-07-16T06:36:31.484</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

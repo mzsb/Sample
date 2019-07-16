@@ -17,7 +17,7 @@ namespace Sample.UWPClient.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public readonly ConcertService concertService = new ConcertService();
+        public readonly HttpService httpService = new HttpService();
 
         public ObservableCollection<Concert> SoonConcerts { get; set; } = new ObservableCollection<Concert>();
 
@@ -56,7 +56,7 @@ namespace Sample.UWPClient.ViewModels
 
             if (restMethod != null)
             {
-                List<Concert> concerts = await concertService.GetConcertsAsync(restMethod);
+                List<Concert> concerts = await httpService.HttpRequestAsync<List<Concert>>(restMethod);
 
                 foreach (var item in concerts)
                 {

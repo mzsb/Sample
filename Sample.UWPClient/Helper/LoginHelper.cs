@@ -16,7 +16,10 @@ namespace Sample.UWPClient.Helper
         {
             foreach (PropertyInfo prop in login.GetType().GetProperties())
             {
-                prop.SetValue(login, string.Empty);
+                if(prop.PropertyType == typeof(string))
+                {
+                    prop.SetValue(login, string.Empty);
+                }
             }
         }
 

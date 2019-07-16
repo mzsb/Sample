@@ -12,6 +12,9 @@ using Windows.UI.Popups;
 using Windows.UI.Xaml.Navigation;
 using Sample.UWPClient.Helper;
 using Sample.DTO.Models;
+using Sample.RestHelper.Models;
+using Newtonsoft.Json;
+using Windows.Web.Http;
 
 namespace Sample.UWPClient.ViewModels
 {
@@ -19,7 +22,7 @@ namespace Sample.UWPClient.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public readonly AuthenticationService authenticationService = new AuthenticationService();
+        public readonly HttpService httpService = new HttpService();
 
         public AppUser AppUser { get; set; }
 
@@ -85,9 +88,12 @@ namespace Sample.UWPClient.ViewModels
         {
             if (await Login.IsValid())
             {
-                AppUser = await authenticationService.LoginAsync(Login);
 
-                ServiceBase.Token = AppUser.Token ?? string.Empty;
+                AppUser = await httpService.HttpRequestAsync<AppUser>("https://localhost:5001/api/Login",
+                                                                      HttpMethod.Post,
+                                                                      JsonConvert.SerializeObject(Login));
+
+                HttpService.Token = AppUser.Token ?? string.Empty;
             }
         }
 
@@ -95,9 +101,11 @@ namespace Sample.UWPClient.ViewModels
         {
             if(await Registration.IsValid())
             {
-                AppUser = await authenticationService.RegistrationAsync(Registration);
+                AppUser = await httpService.HttpRequestAsync<AppUser>("https://localhost:5001/api/Registration",
+                                                                      HttpMethod.Post,
+                                                                      JsonConvert.SerializeObject(Registration));
 
-                ServiceBase.Token = AppUser.Token ?? string.Empty;
+                HttpService.Token = AppUser.Token ?? string.Empty;
             }
         }
     }

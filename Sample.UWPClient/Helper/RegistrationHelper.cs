@@ -17,7 +17,10 @@ namespace Sample.UWPClient.Helper
         {
             foreach (PropertyInfo prop in registration.GetType().GetProperties())
             {
-                prop.SetValue(registration, string.Empty);
+                if (prop.PropertyType == typeof(string))
+                {
+                    prop.SetValue(registration, string.Empty);
+                }
             }
         }
 

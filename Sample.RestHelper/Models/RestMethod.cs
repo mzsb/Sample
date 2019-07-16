@@ -8,7 +8,7 @@ namespace Sample.RestHelper.Models
     {
         public MethodType MethodType { get; set; }
 
-        public string Controller { get; set; }
+        public string ResponseType { get; set; }
 
         public bool HasParameter { get; set; } = false;
 

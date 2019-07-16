@@ -15,7 +15,7 @@ namespace Sample.UWPClient.ViewModels
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
-        private readonly ConcertService concertService = new ConcertService();
+        private readonly HttpService httpService = new HttpService();
 
         private AppUser appUser = new AppUser();
         public AppUser AppUser
@@ -65,7 +65,7 @@ namespace Sample.UWPClient.ViewModels
 
             if(restMethod != null)
             {
-                Concert = await concertService.GetConcertsDetailsAsync(restMethod);
+                Concert = await httpService.HttpRequestAsync<Concert>(restMethod);
             }
         }
     }
