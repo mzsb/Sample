@@ -5,71 +5,48 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:converters="using:Sample.UWPClient.Converters"
+    xmlns:usercontrols="using:Sample.UWPClient.UserControls"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <converters:BooleanToVisibilityConverter x:Key="BoolToVis" />
-    </Page.Resources>
+    <usercontrols:SampleNavigationView x:Name="NavView">
+        <usercontrols:SampleNavigationView.NavigationContent>
 
-    <NavigationView IsBackButtonVisible="Collapsed">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="497*"/>
+                </Grid.RowDefinitions>
 
-        <NavigationView.MenuItems>
+                <GridView x:Name="DictionaryList"
+                          Margin="20,14,0,0"
+                          Grid.Column="0"
+                          Grid.Row="2"
+                          ItemsSource="{Binding SoonConcerts}"
+                          IsItemClickEnabled="true"
+                          ItemClick="ConcertItem_Click">
 
-            <NavigationViewItemHeader Content="Adminisztráció" 
-                                      Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
+                    <GridView.Header>
+                        <TextBlock Text="Soon" 
+                                   FontSize="50"
+                                   Margin="0,0,0,20"/>
+                    </GridView.Header>
 
-            <NavigationViewItem Icon="AllApps"
-                                Content="Koncertek"/>
+                    <GridView.ItemTemplate>
+                        <DataTemplate>
 
-            <NavigationViewItem Icon="Add"
-                                Content="Új koncert"
-                                Tapped="NewConcert_Click"
-                                Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
+                            <TextBlock Margin="0,5"
+                                       Width="100"
+                                       Height="100"
+                                       HorizontalAlignment="Center"
+                                       Text="{Binding Name}"
+                                       FontSize="25"/>
+                        </DataTemplate>
+                    </GridView.ItemTemplate>
+                </GridView>
 
-        </NavigationView.MenuItems>
-        
-        <NavigationView.PaneFooter>
+            </Grid>
             
-            <NavigationViewItem Icon="MoveToFolder"
-                                Content="Kijelentkezés"
-                                Tapped="SignOut_Click"/>
-            
-        </NavigationView.PaneFooter>
-
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="3*"/>
-                <RowDefinition Height="497*"/>
-            </Grid.RowDefinitions>
-
-            <GridView x:Name="DictionaryList"
-                      Margin="20,14,0,0"
-                      Grid.Column="0"
-                      Grid.Row="2"
-                      ItemsSource="{Binding SoonConcerts}"
-                      IsItemClickEnabled="true"
-                      ItemClick="ConcertItem_Click">
-
-                <GridView.Header>
-                    <TextBlock Text="Soon" 
-                               FontSize="50"
-                               Margin="0,0,0,20"/>
-                </GridView.Header>
-
-                <GridView.ItemTemplate>
-                    <DataTemplate>
-
-                        <TextBlock Margin="0,5"
-                                   Width="100"
-                                   Height="100"
-                                   HorizontalAlignment="Center"
-                                   Text="{Binding Name}"
-                                   FontSize="25"/>
-                    </DataTemplate>
-                </GridView.ItemTemplate>
-            </GridView>
-
-        </Grid>
-    </NavigationView>
+        </usercontrols:SampleNavigationView.NavigationContent>
+    </usercontrols:SampleNavigationView>
 </Page>

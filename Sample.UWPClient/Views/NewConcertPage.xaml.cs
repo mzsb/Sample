@@ -42,16 +42,15 @@ namespace Sample.UWPClient.Views
 
             viewModel.AppUser = navObj.Get<AppUser>();
 
+            NavView.AppUser = viewModel.AppUser;
+
+            NavView.NewConcertButtonVisibility = true;
+
             base.OnNavigatedTo(e);
         }
 
 
         // Esemenykezelok //
-
-        private void Concerts_Click(object sender, RoutedEventArgs e)
-        {
-            NavigateToConcertsPage();
-        }
 
         private async void CreateConcert_Click(object sender, RoutedEventArgs e)
         {
@@ -60,38 +59,6 @@ namespace Sample.UWPClient.Views
             if(viewModel.Concert != null)
             {
                 NavigateToConcertDetailsPage();
-            }
-        }
-
-        private void SignOut_Click(object sender, RoutedEventArgs e)
-        {
-            NavigateToAuthenticationPage();
-        }
-
-        private void NavigationView_BackRequested(NavigationView sender, NavigationViewBackRequestedEventArgs args)
-        {
-            NavigateBack();
-        }
-
-        // Navigacio //
-
-        private void NavigateToAuthenticationPage()
-        {
-            Frame.Navigate(typeof(AuthenticationPage),
-                           new NavigationObject().Add(viewModel.AppUser));
-        }
-
-        private void NavigateToConcertsPage()
-        {
-            Frame.Navigate(typeof(ConcertsPage),
-                           new NavigationObject().Add(viewModel.AppUser));
-        }
-
-        private void NavigateBack()
-        {
-            if (Frame.CanGoBack)
-            {
-                Frame.GoBack();
             }
         }
 

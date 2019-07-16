@@ -82,6 +82,9 @@
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Styles\CommonStyle.xbf">
       <PackagePath>Styles\CommonStyle.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\UserControls\SampleNavigationView.xbf">
+      <PackagePath>UserControls\SampleNavigationView.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Views\AuthenticationPage.xbf">
       <PackagePath>Views\AuthenticationPage.xbf</PackagePath>
     </AppxPackagedFile>

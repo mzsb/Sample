@@ -52,10 +52,7 @@ namespace Sample.UWPClient.Views
 
         private async void Login_ClickAsync(object sender, RoutedEventArgs e)
         {
-            /// Temp ///
-            viewModel.Login.UserName = "Admin";
-            viewModel.Login.Password = "J1ezdmeg+";
-            /// Temp ///
+
 
             await viewModel.LoginAsync();
 

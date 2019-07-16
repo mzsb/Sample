@@ -5,51 +5,24 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:converters="using:Sample.UWPClient.Converters"
+    xmlns:usercontrols="using:Sample.UWPClient.UserControls"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <converters:BooleanToVisibilityConverter x:Key="BoolToVis" />
-    </Page.Resources>
+    <usercontrols:SampleNavigationView x:ConnectionId='2' x:Name="NavView">
+        <usercontrols:SampleNavigationView.NavigationContent>
 
-    <NavigationView x:ConnectionId='2' IsBackEnabled="True"
-                                                                >
-
-
-        <NavigationView.MenuItems>
-            
-            <NavigationViewItemHeader Content="Adminisztráció" 
-                                      Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
-
-            <NavigationViewItem x:ConnectionId='3' Icon="AllApps"
-                                Content="Koncertek"
-                                                       />
-
-            <NavigationViewItem x:ConnectionId='4' Icon="Add"
-                                Content="Új koncert"
-                                                         
-                                Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
-
-        </NavigationView.MenuItems>
-
-        <NavigationView.PaneFooter>
-
-            <NavigationViewItem x:ConnectionId='5' Icon="MoveToFolder"
-                                Content="Kijelentkezés"
-                                                      />
-
-        </NavigationView.PaneFooter>
-
-        <Grid>
+            <Grid>
            
-            <TextBlock x:ConnectionId='6' x:Name="PageHeader"
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       Text="{Binding Concert.Name}"
-                       FontSize="100"
-                       Margin="30,30,0,0"/>
+                <TextBlock x:ConnectionId='3' x:Name="PageHeader"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="{Binding Concert.Name}"
+                            FontSize="100"
+                            Margin="30,30,0,0"/>
         
-        </Grid>
-
-     </NavigationView>
+            </Grid>
+            
+       </usercontrols:SampleNavigationView.NavigationContent>
+    </usercontrols:SampleNavigationView>
 </Page>
 

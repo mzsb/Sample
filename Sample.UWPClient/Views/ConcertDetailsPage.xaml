@@ -5,50 +5,23 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:converters="using:Sample.UWPClient.Converters"
+    xmlns:usercontrols="using:Sample.UWPClient.UserControls"
     mc:Ignorable="d">
 
-    <Page.Resources>
-        <converters:BooleanToVisibilityConverter x:Key="BoolToVis" />
-    </Page.Resources>
+    <usercontrols:SampleNavigationView x:Name="NavView">
+        <usercontrols:SampleNavigationView.NavigationContent>
 
-    <NavigationView IsBackEnabled="True"
-                    BackRequested="NavigationView_BackRequested">
-
-
-        <NavigationView.MenuItems>
-            
-            <NavigationViewItemHeader Content="Adminisztráció" 
-                                      Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
-
-            <NavigationViewItem Icon="AllApps"
-                                Content="Koncertek"
-                                Tapped="Concerts_Click"/>
-
-            <NavigationViewItem Icon="Add"
-                                Content="Új koncert"
-                                Tapped="NewConcert_Click"
-                                Visibility="{Binding NewConcertButtonVisibility, Converter={StaticResource BoolToVis}}"/>
-
-        </NavigationView.MenuItems>
-
-        <NavigationView.PaneFooter>
-
-            <NavigationViewItem Icon="MoveToFolder"
-                                Content="Kijelentkezés"
-                                Tapped="SignOut_Click"/>
-
-        </NavigationView.PaneFooter>
-
-        <Grid>
+            <Grid>
            
-            <TextBlock x:Name="PageHeader"
-                       Grid.Row="0"
-                       Grid.Column="0"
-                       Text="{Binding Concert.Name}"
-                       FontSize="100"
-                       Margin="30,30,0,0"/>
+                <TextBlock x:Name="PageHeader"
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Text="{Binding Concert.Name}"
+                            FontSize="100"
+                            Margin="30,30,0,0"/>
         
-        </Grid>
-
-     </NavigationView>
+            </Grid>
+            
+       </usercontrols:SampleNavigationView.NavigationContent>
+    </usercontrols:SampleNavigationView>
 </Page>

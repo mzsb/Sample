@@ -9,6 +9,7 @@ Assets\Wide310x150Logo.scale-200.png
 App.xbf
 Sample.UWPClient.xr.xml
 Styles\CommonStyle.xbf
+UserControls\SampleNavigationView.xbf
 Views\AuthenticationPage.xbf
 Views\ConcertDetailsPage.xbf
 Views\ConcertsPage.xbf

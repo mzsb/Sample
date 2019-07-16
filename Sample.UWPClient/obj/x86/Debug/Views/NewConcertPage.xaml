@@ -5,40 +5,23 @@
     xmlns:local="using:Sample.UWPClient.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:usercontrols="using:Sample.UWPClient.UserControls"
     mc:Ignorable="d">
 
-    <NavigationView x:ConnectionId='2' IsBackEnabled="True"
-                                                                >
+    <usercontrols:SampleNavigationView x:ConnectionId='2' x:Name="NavView">
+        <usercontrols:SampleNavigationView.NavigationContent>
 
-        <NavigationView.MenuItems>
-
-            <NavigationViewItemHeader Content="Adminisztráció"/>
-
-            <NavigationViewItem x:ConnectionId='3' Icon="AllApps"
-                                Content="Koncertek"
-                                                       />
-
-            <NavigationViewItem Icon="Add"
-                                Content="Új koncert"/>
-
-        </NavigationView.MenuItems>
-
-        <NavigationView.PaneFooter>
-
-            <NavigationViewItem x:ConnectionId='4' Icon="MoveToFolder"
-                                Content="Kijelentkezés"
-                                                      />
-
-        </NavigationView.PaneFooter>
-
-        <Grid>
-            <Button x:ConnectionId='5' Content="Új koncert"
+            <Grid>
+            
+                <Button x:ConnectionId='3' Content="Új koncert"
                     Width="200"
                     Height="200"
                                                
                     HorizontalAlignment="Center"/>
-        </Grid>
+            </Grid>
 
-    </NavigationView>
+        </usercontrols:SampleNavigationView.NavigationContent>
+    </usercontrols:SampleNavigationView>
+    
 </Page>
 

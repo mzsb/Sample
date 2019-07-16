@@ -47,7 +47,10 @@ namespace Sample.WebAPI.Controllers
 
                 mapped.AddMethod<Concert>(MethodType.Get);
 
-                mapped.AddMethod<Concert>(MethodType.Post, mapped.Id.ToString());
+                mapped.AddMethod().SetResponse(typeof(Concert))
+                                  .SetMethod(MethodType.Post)
+                                  .SetController("Concert")
+                                  .SetParameter(mapped.Id.ToString());
 
                 return Ok(mapped);
             }

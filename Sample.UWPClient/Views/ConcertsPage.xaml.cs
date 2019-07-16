@@ -44,14 +44,14 @@ namespace Sample.UWPClient.Views
 
             viewModel.AppUser = navObj.Get<AppUser>();
 
-            if (appUser is AppUser)
-            {
-                viewModel.AppUser = appUser;
+            viewModel.NewConcertButtonVisibility = viewModel.AppUser.IsInRole(Roles.Administrator);
 
-                viewModel.NewConcertButtonVisibility = viewModel.AppUser.IsInRole(Roles.Administrator);
+            NavView.AppUser = viewModel.AppUser;
 
-                await viewModel.GetConcerts();
-            }
+            NavView.NewConcertButtonVisibility = viewModel.NewConcertButtonVisibility;
+
+            await viewModel.GetConcerts();
+
 
             base.OnNavigatedTo(e);
         }
@@ -59,35 +59,13 @@ namespace Sample.UWPClient.Views
 
         // Esemenykezelok //
 
-        private void SignOut_Click(object sender, RoutedEventArgs e)
-        {
-            NavigateToAuthenticationPage();
-        }
-
         private void ConcertItem_Click(object sender, ItemClickEventArgs e)
         {
             NavigateToConcertDetailsPage((Concert)e.ClickedItem);
         }
 
-        private void NewConcert_Click(object sender, RoutedEventArgs e)
-        {
-            NavigateToNewConcertPage();
-        }
-
 
         // Navigacio //
-
-        private void NavigateToNewConcertPage()
-        {
-            Frame.Navigate(typeof(NewConcertPage),
-                           new NavigationObject().Add(viewModel.AppUser));
-        }
-
-        private void NavigateToAuthenticationPage()
-        {
-            Frame.Navigate(typeof(AuthenticationPage),
-                           new NavigationObject().Add(viewModel.AppUser));
-        }
 
         private void NavigateToConcertDetailsPage(Concert concert)
         {

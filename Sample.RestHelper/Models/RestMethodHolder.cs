@@ -11,11 +11,11 @@ namespace Sample.RestHelper.Models
 
         public List<RestMethod> RestMethods { get; set; } = new List<RestMethod>();
 
-        public void AddMethod<T>(MethodType methodType, string parameter = "") where T : RestMethodHolder
+        public RestMethod AddMethod<T>(MethodType methodType, string parameter = "") where T : RestMethodHolder
         {
             bool hasParameter = !string.IsNullOrEmpty(parameter);
 
-            RestMethods.Add(new RestMethod()
+            RestMethod restMethod = new RestMethod
             {
                 MethodType = methodType,
                 ResponseType = typeof(T).Name,
@@ -23,23 +23,25 @@ namespace Sample.RestHelper.Models
                 Route = routeBase
                 + typeof(T).Name
                 + (hasParameter ? "/" + parameter : string.Empty)
-            });
+            };
+
+            RestMethods.Add(restMethod);
+
+            return restMethod;
         }
 
-        public void AddMethod<T,K>(MethodType methodType, string parameter = "") where T : RestMethodHolder where K : RestMethodHolder
+        public RestMethod AddMethod()
         {
-            bool hasParameter = !string.IsNullOrEmpty(parameter);
-
-            RestMethods.Add(new RestMethod()
+            RestMethod restMethod = new RestMethod()
             {
-                MethodType = methodType,
-                ResponseType = typeof(T).Name,
-                HasParameter = hasParameter,
                 Route = routeBase
-                + typeof(K).Name
-                + (hasParameter ? "/" + parameter : string.Empty)
-            });
+            };
+
+            RestMethods.Add(restMethod);
+
+            return restMethod;
         }
+
 
         public RestMethod GetMethod<T>(MethodType methodType, bool hasParameter = false) where T : RestMethodHolder
         {

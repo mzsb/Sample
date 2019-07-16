@@ -66,3 +66,8 @@ C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.RestHelper.d
 C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.RestHelper.pdb
 C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.DTO.dll
 C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\Sample.DTO.pdb
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\obj\x86\Debug\UserControls\SampleNavigationView.g.i.cs
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\obj\x86\Debug\UserControls\SampleNavigationView.g.cs
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\obj\x86\Debug\UserControls\SampleNavigationView.xaml
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\obj\x86\Debug\UserControls\SampleNavigationView.xbf
+C:\Users\mozs.barnabas\Sample\Sample.UWPClient\bin\x86\Debug\UserControls\SampleNavigationView.xbf

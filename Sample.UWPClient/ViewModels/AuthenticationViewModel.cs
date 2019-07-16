@@ -89,9 +89,13 @@ namespace Sample.UWPClient.ViewModels
             if (await Login.IsValid())
             {
 
-                AppUser = await httpService.HttpRequestAsync<AppUser>("https://localhost:5001/api/Login",
-                                                                      HttpMethod.Post,
-                                                                      JsonConvert.SerializeObject(Login));
+                RestMethod restMethod = new AppUser().AddMethod()
+                                                     .SetResponse(typeof(AppUser))
+                                                     .SetMethod(MethodType.Post)
+                                                     .SetController("Login")
+                                                     .SetJsonBody(JsonConvert.SerializeObject(Login));
+
+                AppUser = await httpService.HttpRequestAsync<AppUser>(restMethod);
 
                 HttpService.Token = AppUser.Token ?? string.Empty;
             }
@@ -100,10 +104,14 @@ namespace Sample.UWPClient.ViewModels
         public async Task RegistrationAsync()
         {
             if(await Registration.IsValid())
-            {
-                AppUser = await httpService.HttpRequestAsync<AppUser>("https://localhost:5001/api/Registration",
-                                                                      HttpMethod.Post,
-                                                                      JsonConvert.SerializeObject(Registration));
+            { 
+                RestMethod restMethod = new AppUser().AddMethod()
+                                                     .SetResponse(typeof(AppUser))
+                                                     .SetMethod(MethodType.Post)
+                                                     .SetController("Registration")
+                                                     .SetJsonBody(JsonConvert.SerializeObject(Registration));
+            
+                AppUser = await httpService.HttpRequestAsync<AppUser>(restMethod);
 
                 HttpService.Token = AppUser.Token ?? string.Empty;
             }
