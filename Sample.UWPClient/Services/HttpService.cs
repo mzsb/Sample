@@ -50,38 +50,5 @@ namespace Sample.UWPClient.Services
                 return JsonConvert.DeserializeObject<T>(result);
             }
         }
-
-        public async Task<T> HttpRequestAsync<T>(string route, HttpMethod httpMethod, string jsonBody = "")
-        {
-            var filter = new HttpBaseProtocolFilter();
-
-            filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Expired);
-            filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
-            filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
-
-            using (var httpClient = new Windows.Web.Http.HttpClient(filter))
-            {
-                var request = new Windows.Web.Http.HttpRequestMessage(httpMethod,
-                                                                        new Uri(route));
-                if (!string.IsNullOrEmpty(Token))
-                {
-                    request.Headers.Authorization = new HttpCredentialsHeaderValue("Bearer", Token);
-                }
-
-                if (!string.IsNullOrEmpty(jsonBody))
-                {
-                    request.Content = new Windows.Web.Http.HttpStringContent(jsonBody);
-                    request.Content.Headers.ContentType = new HttpMediaTypeHeaderValue("application/json");
-                }
-
-                Windows.Web.Http.HttpResponseMessage response;
-
-                response = await httpClient.SendRequestAsync(request);
-
-                var result = await response.Content.ReadAsStringAsync();
-
-                return JsonConvert.DeserializeObject<T>(result);
-            }
-        }
     }
 }
